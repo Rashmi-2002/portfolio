@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashmi Nanajkar_Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/da48d2a9f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class='container'>
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Rashmi Nanajkar</h1><br>
+            <p>Btech CSE,WIT Solapur</p><br><br>
+            <p class="profile">As a Computer Science Engineering student and a passion for <br> technology,
+                eager to kickstart a career in IT and excited to contribute <br> my knowledge and enthusiasm to a dynamic team and learn from <br> experienced professionals in the field.</p>
+        </div>
+    </div>
+   
+
+ </div> 
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img class="img1" src="rashmi1.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1><br>
+                <p>Myself Rashmi Anil Nanajkar.I am currently pursuing Btech in Computer Science and engineering from Walchand Institute of technology,Solapur.I love to learn new technologies.I have participated in innovative India coding championship organized by Coding Ninja.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('internship')">Internships</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>C,Python,Java</li><br>
+                        <li><span>Web Development</span><br>HTML,CSS,JavaScript</li><br>
+                        <li><span>Mobile Application Development</span><br>On Android Studio using Java</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="internship">
+                    <ul>
+                        <li><span>Data Science Internship</span><br>at Infosys Springboard</li><br>
+                    </ul>
+                    <ul>
+                        <li><span>Full Stack Developer Internship</span><br>at IEEE fall internship program</li><br>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018-SSC</span><br>H.D.High School,Solapur.<br>Percentage-95%</li><br>
+                        <li><span>2020-HSC</span><br>Sangameshwar college,Solapur.<br>Percentage-89.54%</li><br>
+                        <li><span>2021-2024 Btech</span><br>Walchand Institute of Technology,Solapur.<br>CGPA-9.8</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ </div> 
+ <div id="certifications">
+    <div class="container">
+        <h1 class="subtitle">Internship and Certifications</h1><br>
+        <div class="margin">
+            <a href="Internship.png">
+                <img src="Internship.png" alt="">
+            </a>
+            <a href="python_training.png">
+                <img src="python_training.png" alt="">
+            </a>
+        </div><br>
+        <div class="margin">
+            <a href="java.png">
+                <img src="java.png" alt="">
+            </a>
+            <a href="Coursers.png">
+                <img src="Coursers.png" alt="">
+            </a>
+        </div><br>
+        <div class="margin">
+            <a href="AWS.png">
+                <img src="AWS.png" alt="">
+            </a>
+            <a href="AZ.png">
+                <img src="AZ.png" alt="">
+            </a>
+        </div><br>
+        <div class="margin">
+            <a href="PL.png">
+                <img src="PL.png" alt="">
+            </a>
+            <a href="NPTEL.png">
+                <img src="NPTEL.png" alt="">
+            </a>
+        </div><br>
+    </div>
+ </div>
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>rashminanajkar@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91-8180938258</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rashmi-nanajkar-41548522a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Rashmi-2002"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/rashmiii_29?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+                <a href="Rashmi-Nanajkar-Resume.pdf" download class="btn2">Download Resume</a>
+            </div>
+            <div id="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="btn2" type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+ </div>
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+ </script>
+ <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+ </script>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwj_FcxT_1a0s6YZKiRaDiY9415UNFB76l9kgmWtZkHWLCSj_c-JLsbDDKCkY6aX_kMnw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully!!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
